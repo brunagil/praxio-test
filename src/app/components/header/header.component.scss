@@ -1,0 +1,79 @@
+.header {
+    background: url('./../../../assets/img/bg-front.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 100%;
+    height: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 900px) {
+        background-size: 100%;
+    }
+
+    @media (max-width: 750px) {
+        height: 85vh;
+        background-size: 110%;
+    }
+
+    @media (max-width: 520px) {
+        background-size: 130%;
+    }
+
+    @media (max-width: 420px) {
+        height: 95vh;
+        background-size: 140%;
+    }
+
+    &__logo {
+        margin: 2rem 0;
+
+        @media (max-width: 750px) {
+            width: 250px;
+        }
+
+        @media (max-width: 420px) {
+            width: 195px;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__content h1, & h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        font-family: 'Mukta', 'Arial';
+        color: white;
+
+        @media (max-width: 750px) {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 420px) {
+            font-size: .9rem;
+            width: 90%;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 0 70px;
+        margin: 1.5rem 0;
+        transition: background-color 0.5s ease;
+        &:hover {
+            background-color: #ffffff; 
+            color: #7626FF;
+        }
+
+        @media(max-width: 420px) {
+            padding: 0 50px;
+        }
+    }
+}
