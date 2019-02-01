@@ -14,7 +14,7 @@ export class CardsComponent {
       left: 'card_left',
       center: 'card_center',
       right: 'card_right'
-  }
+    }
   return cardClasses[this.cardPosition];
   }
 }
