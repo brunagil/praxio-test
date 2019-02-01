@@ -1,8 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*-- GENERAL STYLING */
+
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: 'Mukta', Arial, Helvetica, sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    padding: 5px 66px;
+    border-radius: 15px;
+    border: 2px solid #FFFFFF;
+}
+
+/*-- PALETE COLOR --*/
+
+$base-color: #FFFFFF;
+$dark-color: #000000;
+$purple-btn-color: #733FFF;
+$gray-text-color:#585859;
+$gray-link-color: #707070;
+$gray-input-border: #C2C2C2;
+$gray-placeholder: #CAD0DC;
+$blue-signup-link: #0077C5;
+$gray-logout-border: #EAEAEC;
