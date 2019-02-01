@@ -1,20 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './pages/home/module/home.module';
+import { LoginModule } from './pages/login/module/login.module';
 import { AppComponent } from './app.component';
 
 
 @NgModule({
-  declarations: [ //declara todas as diretivas que vamos utilizar nesse módulo
+  declarations: [ //declara componentes que vamos utilizar nesse módulo
     AppComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    LoginModule,
   ],
+  
   providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (router)
   bootstrap: [AppComponent] //componente que serve como container para nosso projeto
 })

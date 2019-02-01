@@ -1,0 +1,19 @@
+<section class="login-page">
+    <div class="login__form">
+        <h1 class="login__form-title">Entrar</h1>
+        <form 
+        [formGroup]="loginForm" 
+        (ngSubmit)="onSubmit()">
+        <div class="login__input-text">
+            <input type="email" placeholder="E-mail" id="email" required="true" />
+            <input type="password" placeholder="Senha" id="senha" required="true" />
+            <a href="#" class="login__link">Esqueceu a senha?</a>
+        </div>
+            <app-button [isFormValid]="loginForm.valid" value="Entrar"></app-button>
+                <a href="/signin" class="login__link-cadastro">Não tem uma conta? Cadastre-se</a>
+        </form>
+    </div>
+        
+    <div class="form-pages__footer"></div>
+</section>
+    
