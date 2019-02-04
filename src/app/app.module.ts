@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './pages/home/module/home.module';
 import { LoginModule } from './pages/login/module/login.module';
-import { RegisterComponent } from './pages/register/register.component';
+import { RegisterModule } from './pages/register/module/register.module';
 import { AppComponent } from './app.component';
 
 
 
 @NgModule({
   declarations: [ //declara componentes que vamos utilizar nesse módulo
-    AppComponent, RegisterComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HomeModule,
     LoginModule,
+    RegisterModule,
   ],
   
   providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (router)

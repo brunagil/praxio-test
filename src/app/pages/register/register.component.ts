@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 
 export class RegisterComponent {
   title = 'Cadastrar'
-  subtitle = 'Informações Pessoais'
+  subtitle_1 = 'Informações Pessoais'
+  subtitle_2 = 'Endereço'
   button_title = 'Cadastrar'
 
 }
