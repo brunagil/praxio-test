@@ -1,3 +1,104 @@
-<p>
-  register works!
-</p>
+<section class="form-pages form-pages--signin">
+  <div class="form-pages__signin">
+    <h1 class="form-pages__title">{{ title }}</h1>
+
+    <form class="form">
+      <div class="form-pages__columns">
+        
+        <div class="form-pages__half-column form-pages__half-column--left">
+          <h2 class="form-pages__subtitle">{{ subtitle }}</h2>
+          
+          <input 
+            type="text" 
+            placeholder="Nome/ Razão Social" 
+            id="name" 
+            minlength="2" 
+            maxlength="100" 
+            required="true"
+          />
+
+          <div class="form-pages__columns">
+            <div class="form-pages__half-column form-pages__half-column--left">
+              <input 
+                type="text" 
+                placeholder="CPF" 
+                id="cpf" 
+                isNumeric="true" 
+                minlength="11" 
+                required="true" 
+              />
+            </div>
+
+            <div class="form-pages__half-column">
+              <input 
+                type="text" 
+                placeholder="Telefone" 
+                id="telefone" 
+                isNumeric="true" 
+                minlength= "10" 
+                required="true" 
+              />
+            </div>
+          </div>
+
+          <input 
+            type="text" 
+            placeholder="E-mail" 
+            id="email" 
+            required="true" 
+          />
+          
+          <input 
+            type="password" 
+            isPassword="true" 
+            placeholder="Senha" 
+            id="senha" 
+            required="true" 
+          />
+        </div>
+
+        <div class="form-pages__half-column">
+          <h2 class="form-pages__subtitle">Endereço</h2>
+
+          <div class="form-pages__columns">
+            <div class="form-pages__half-column form-pages__half-column--left">
+              <input 
+                type="text" 
+                placeholder="CEP" 
+                id="cep" 
+                isNumeric="true" 
+                minlength="8" 
+                required= "true" />
+            </div>
+            <div class="form-pages__half-column">
+              <input 
+                type="text" 
+                placeholder="Logradouro" 
+                id="logradouro" 
+                required="true" />
+            </div>
+          </div>
+          <div class="form-pages__columns">
+            <div class="form-pages__half-column form-pages__half-column--left">
+              <input 
+                type="text" 
+                placeholder="Número" 
+                id="numero" 
+                required="true" />
+            </div>
+            <div class="form-pages__half-column">
+              <input 
+                type="text" 
+                placeholder="Bairro" 
+                id="bairro" 
+                required="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button value="Cadastrar">{{ button_title }}</button>
+      <a href="/login" class="form-pages__link">Já tem uma conta? Faça login</a>
+    </form>
+  </div>
+  <div class="footer__pages"></div>
+</section>

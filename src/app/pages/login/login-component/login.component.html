@@ -1,19 +1,33 @@
+
+
 <section class="login-page">
-    <div class="login__form">
-        <h1 class="login__form-title">Entrar</h1>
-        <form 
-        [formGroup]="loginForm" 
-        (ngSubmit)="onSubmit()">
-        <div class="login__input-text">
-            <input type="email" placeholder="E-mail" id="email" required="true" />
-            <input type="password" placeholder="Senha" id="senha" required="true" />
-            <a href="#" class="login__link">Esqueceu a senha?</a>
-        </div>
-            <app-button [isFormValid]="loginForm.valid" value="Entrar"></app-button>
-                <a href="/signin" class="login__link-cadastro">Não tem uma conta? Cadastre-se</a>
-        </form>
+    <div class="login">
+        <h1 class="login__title">{{ title }}</h1>
+        <form class="form">
+            <div class="login__inputs">
+                <input 
+                    class="login__inputs_size"
+                    type="email" 
+                    placeholder="E-mail" 
+                    id="email" 
+                    required="true"
+                />
+                <input 
+                    class="login__inputs_size"
+                    type="password" 
+                    isPassword="true" 
+                    placeholder="Senha" 
+                    id="senha"
+                    required="true" 
+                    />
+                <a href="#" class="login__forgot-password">Esqueceu a senha?</a>
+            </div>
+            <div class="form-button">
+                <app-button value="Entrar" class="login__btn">{{ button_title }}</app-button>
+            </div>
+            </form>
+        <a href="/signin" class="anchor-signin login-link">Não tem uma conta? Cadastre-se</a>
     </div>
-        
-    <div class="form-pages__footer"></div>
-</section>
     
+    <div class="footer__pages"></div>
+</section>
