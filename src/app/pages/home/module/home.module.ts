@@ -9,21 +9,22 @@ import { FooterComponent } from '../../../components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    HeaderComponent,
-    CardsComponent,
-    FooterComponent,
+      HomeComponent,
+      HeaderComponent,
+      CardsComponent,
+      FooterComponent
   ],
   exports: [
-    HomeComponent,
-    HeaderComponent,
-    CardsComponent,
-    FooterComponent,
+      HomeComponent,
+      HeaderComponent,
+      CardsComponent,
+      FooterComponent
+
   ],
   imports: [
-    CommonModule,
-    NavbarModule,
-  ]
-
+      CommonModule,
+      NavbarModule
+  ],
 })
+
 export class HomeModule { }

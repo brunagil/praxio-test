@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NavbarModule } from './../../../components/navbar/module/navbar.module';
 
@@ -16,6 +17,8 @@ import  { RegisterComponent } from './../register.component';
     CommonModule,
     NavbarModule,
     ButtonModule,
+    FormsModule,
+    FormsModule
   ]
 
 })

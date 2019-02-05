@@ -3,8 +3,11 @@
     <img src="./../../../assets/img/front-test-logo.svg" alt="Logo formado pela letra f em branco e um fundo roxo semicircular">
   </div>
   <div class="navbar__btn">
-    <button>
-      Logout
+    <button
+        class= "navbar__logout-btn"
+        (click)="userLogout()"
+        [ngClass]= "!isUserLogged() ? 'navbar__logout-btn' : '' " >
+        Logout
     </button>
   </div>
 </nav>

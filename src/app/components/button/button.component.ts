@@ -8,6 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class ButtonComponent {
   @Input() value: string;
-  @Input() name: string;
   @Input() theFormIsValid: boolean;
 }

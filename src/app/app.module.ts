@@ -7,6 +7,7 @@ import { HomeModule } from './pages/home/module/home.module';
 import { LoginModule } from './pages/login/module/login.module';
 import { RegisterModule } from './pages/register/module/register.module';
 import { AppComponent } from './app.component';
+import { RouterLink, Router } from '@angular/router';
 
 
 
@@ -21,6 +22,9 @@ import { AppComponent } from './app.component';
     HomeModule,
     LoginModule,
     RegisterModule,
+  ],
+  entryComponents: [
+    
   ],
   
   providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (router)
