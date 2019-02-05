@@ -1,9 +1,33 @@
 .login {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
-    margin: 150px 0;
-    padding: 0 500px;
+    width: 400px;
+    margin: 9rem 30rem;
+
+    @media (max-width:860px) {
+        margin: 8rem 20rem;
+        width: 300px;
+    }
+
+    @media (max-width:800px) {
+        margin: 8rem 20rem;
+        width: 300px;
+    }
+
+    @media (max-width:720px) {
+        margin: 8rem 15rem;
+        width: 300px;
+    }
+
+    @media (max-width:500px) {
+        margin: 8rem 5rem;
+        width: 300px;
+    }
+
+    @media (max-width: 480px) {
+        margin: 8rem 2rem;
+        width: 300px;
+    }
 
     &__title {
         margin-left: 8px;

@@ -66,8 +66,7 @@
         color: #585859;
         
         @media (max-width: 900px) {
-            padding-left: 50px;
-            padding-right: 50px;
+            padding: 6px 25px;
         }
     }
 
@@ -113,6 +112,7 @@
                     background-color: white;
                     border: 1px solid #E0E1E2;
                     color: #585859;
+                    margin: -5px;
                 }
             }
             

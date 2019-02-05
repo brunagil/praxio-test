@@ -5,9 +5,9 @@
 
     <!-- register form -->
     <form class="form" 
-    (ngSubmit)="onSubmit(registerForm)" 
-    #registerForm="ngForm"
-    >
+    #registerForm="ngForm" 
+    (ngSubmit)="onSubmit(registerForm)">
+
       <div class="register__column">
         <div class="register__col6">
           <h2 class="register__subtitle">Informações Pessoais</h2>
@@ -17,14 +17,15 @@
             placeholder="Nome/Razão Social" 
             id="name" 
             required="true"
-            />
-            <!-- [(ngModel)]="input.value"
+            (ngModel)="inputName"
             #inputName="ngModel"
-          <div class="input-error" *ngIf="input.invalid && (input.touched || input.dirty)"></div>
-            <span *ngIf="required && input.errors.required">
-              *Campo obrigatório
-            </span> -->
-
+            />
+            <!-- <div *ngIf="input.invalid && (input.touched || input.dirty)" class="input-error">
+              <span *ngIf="required && input.errors.required">
+                *Campo obrigatório
+              </span>
+            </div> -->
+            
           <div class="register__column">
             <div class="register__col6 register__input_col4">
               <input 
@@ -116,7 +117,10 @@
           </div>
         </div>
       </div>
-      <app-button value="Cadastrar" class=register__btn>Cadastrar</app-button>
+      <!-- register button -->
+      <div class="register__btn">
+        <app-button [theFormIsValid]="registerForm.valid" value="Cadastrar">Cadastrar</app-button>
+      </div>
       <!--forgot password-->
       <a href="/login" class="anchor-login">Já tem uma conta? Faça login</a>
     </form>
