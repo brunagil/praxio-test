@@ -1,0 +1,133 @@
+<section class="register">
+  <div class="register__container">
+    <!-- register title -->
+    <h1 class="register__title">Cadastrar</h1>
+
+    <!-- register form -->
+    <form class="form" 
+    #registerForm="ngForm" 
+    (ngSubmit)="onSubmit(registerForm)">
+
+      <div class="register__column">
+        <div class="register__col6">
+          <h2 class="register__subtitle">Informações Pessoais</h2>
+          <input 
+            class="register__inputs_size"
+            type="text" 
+            placeholder="Nome/Razão Social" 
+            id="name" 
+            required="true"
+            (ngModel)="inputName"
+            #inputName="ngModel"
+            />
+            <!-- <div *ngIf="input.invalid && (input.touched || input.dirty)" class="input-error">
+              <span *ngIf="required && input.errors.required">
+                *Campo obrigatório
+              </span>
+            </div> -->
+            
+          <div class="register__column">
+            <div class="register__col6 register__input_col4">
+              <input 
+                class="register__inputs_size"
+                type="text" 
+                placeholder="CPF" 
+                id="cpf" 
+                isANumber="true" 
+                minlength="10" 
+                required="true"
+              />
+            </div>
+
+            <div class="register__col6">
+              <input 
+                class="register__inputs_size register__input_col4 margin"
+                type="text" 
+                placeholder="Telefone" 
+                id="telefone" 
+                isANumber="true" 
+                length="11" 
+                required="true"
+              />
+            </div>
+          </div>
+
+          <input 
+            class="register__inputs_size"
+            type="text" 
+            placeholder="E-mail" 
+            id="email" 
+            required="true"
+          />
+          <input 
+            class="register__inputs_size"
+            type="password" 
+            isAPassword="true" 
+            placeholder="Senha" 
+            id="senha" 
+            required="true"
+          />
+        </div>
+
+        <!-- 2nd column -->
+        <div class="register__col6">
+          <h2 class="register__subtitle">Endereço</h2>
+          <div class="register__column">
+            <div class="register__col6">
+              <input 
+                class="register__inputs_size register__col2"
+                type="text" 
+                placeholder="CEP" 
+                id="cep" 
+                isANumber="true" 
+                length="8" 
+                required="true"
+              />
+            </div>
+
+            <div class="register__col6">
+              <input 
+                class="register__inputs_size register__col4"
+                type="text" 
+                placeholder="Logradouro" 
+                id="logradouro" 
+                required="true"
+              />
+            </div>
+          </div>
+          <div class="register__column">
+            <div class="register__col6">
+              <input 
+                class="register__inputs_size register__col2"
+                type="text" 
+                placeholder="Número" 
+                id="numero" 
+                required="true"
+              />
+            </div>
+            <div class="register__col6">
+              <input 
+                class="register__inputs_size register__col4"
+                type="text" 
+                placeholder="Bairro" 
+                id="bairro" 
+                required="true"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- register button -->
+      <div class="register__btn">
+        <app-button [theFormIsValid]="registerForm.valid" value="Cadastrar">Cadastrar</app-button>
+      </div>
+      <!--forgot password-->
+      <a href="/login" class="anchor-login">Já tem uma conta? Faça login</a>
+    </form>
+  </div>
+  <div class="footer__pages"></div>
+</section>
+
+
+
+

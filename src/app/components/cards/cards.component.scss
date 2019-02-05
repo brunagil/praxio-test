@@ -1,0 +1,173 @@
+.section-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: -50px;
+
+    @media (max-width: 750px) {
+        flex-flow: row wrap;
+        padding: 0 80px;
+    }
+}
+
+.cards {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 290px;
+    height: 400px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 1px 2px 6px #707070;
+
+    @media (max-width: 900px) {
+        width: 245px;
+        padding: 30px 20px;
+    }
+    
+    @media (max-width: 750px) {
+        width: 300px;
+        margin-bottom: 1.5em;
+    }
+    
+    &__title {
+        margin: 0 0 1em 0;
+        color: #7626FF;
+        font-size: 1.2em;
+        
+        @media (max-width: 900px) {
+            font-size: 1.1em;
+        }
+    }
+    
+    &__fingerprint-img {
+        background: url('./../../../assets/img/bg-front.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @media (max-width: 900px) {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    
+    &__btn {
+        text-decoration: none;
+        background-color: transparent;
+        border: 1px solid #E0E1E2;
+        color: #585859;
+        
+        @media (max-width: 900px) {
+            padding: 6px 25px;
+        }
+    }
+
+    &__footer {
+        background-image: url('./../../../assets/img/bottom-card.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 50px;
+        background-position: 51% 18%;
+    }
+
+       
+        &_center {
+            width: 300px;
+            height: 450px;
+            z-index: 1;
+            box-shadow: 1px 2px 20px #707070;
+            
+            @media (max-width: 900px) {
+                width: 260px;
+                height: 430px;
+            }
+            
+            @media (max-width: 750px) {
+                width: 300px;
+                height: auto;
+                box-shadow: 1px 2px 6px gray;
+            }
+            
+            .cards__btn {
+                background-color: #7626FF;
+                border: 1px solid #7626FF;
+                color: white;
+                position: relative;
+                z-index: 2;
+                transition: background-color 0.5s ease;
+       
+                
+                @media (max-width: 750px) {
+                    background-color: white;
+                    border: 1px solid #E0E1E2;
+                    color: #585859;
+                    margin: -5px;
+                }
+            }
+            
+            .cards__fingerprint-img {
+                width: 150px;
+                height: 150px;
+                
+                @media (max-width: 900px) {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+            
+        }
+        
+        &_left {
+            left: 20px;
+            
+            .card__footer {
+                background-position: 1% 22%;
+            }
+        }
+        
+    &_right {
+        right: 20px;
+
+        .card__footer {
+            background-position: 100% 23%;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        &_left {
+            left: 10px;
+        }
+        
+        &_right {
+            right: 10px;
+        }
+    }
+    
+    @media (max-width: 750px) {
+        &_left {
+            left: 0px;
+        }
+        
+        &_right {
+            right: 0px;
+        }
+    }
+    
+}
+
+
+p {
+    color: #585859;
+    margin-bottom: 20px;
+}
