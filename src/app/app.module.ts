@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 
 
 @NgModule({
-  declarations: [ //declara componentes que vamos utilizar nesse módulo
+  declarations: [ //componentes que vamos utilizar no app.module
     AppComponent, PageNotFoundComponent
   ],
   
@@ -26,7 +26,7 @@ import { AppComponent } from './app.component';
     RegisterModule,
   ],
  
-  providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (router)
+  providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (ex: router)
   bootstrap: [AppComponent] //componente que serve como container para nosso projeto
 })
 export class AppModule { }
