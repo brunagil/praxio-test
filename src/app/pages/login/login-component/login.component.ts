@@ -7,19 +7,19 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent {
-  title = 'Entrar'
-  button_title = 'Entrar'
 
   constructor(private localStorage: LocalStorageService, private router: Router) {
-    if (this.localStorage.getItem('userEmail')) {
-        this.router.navigateByUrl('/');
-    }
-}
+      if (this.localStorage.getItem('userEmail')) {
+          this.router.navigateByUrl('/');
+      }
+  }
 
   onSubmit(loginForm) {
-    const email = loginForm.form.value.email;
-    this.localStorage.setItem('userEmail', email);
-    this.router.navigateByUrl('/');
+      const email = loginForm.form.value.email;
+      this.localStorage.setItem('userEmail', email);
+      this.router.navigateByUrl('/');
   }
+
 }

@@ -1,13 +1,13 @@
-<app-navbar></app-navbar>
-
 <section class="register">
   <div class="register__container">
     <!-- register title -->
     <h1 class="register__title">Cadastrar</h1>
+
     <!-- register form -->
     <form class="form" 
     (ngSubmit)="onSubmit(registerForm)" 
-    #registerForm="ngForm" >
+    #registerForm="ngForm"
+    >
       <div class="register__column">
         <div class="register__col6">
           <h2 class="register__subtitle">Informações Pessoais</h2>
@@ -17,13 +17,13 @@
             placeholder="Nome/Razão Social" 
             id="name" 
             required="true"
-            [(ngModel)]="input.value"
+            />
+            <!-- [(ngModel)]="input.value"
             #inputName="ngModel"
-          />
           <div class="input-error" *ngIf="input.invalid && (input.touched || input.dirty)"></div>
             <span *ngIf="required && input.errors.required">
               *Campo obrigatório
-            </span>
+            </span> -->
 
           <div class="register__column">
             <div class="register__col6 register__input_col4">
@@ -116,7 +116,7 @@
           </div>
         </div>
       </div>
-      <app-button [theFormIsValid]="registerForm.valid" value="Cadastrar" class=register__btn>Cadastrar</app-button>
+      <app-button value="Cadastrar" class=register__btn>Cadastrar</app-button>
       <!--forgot password-->
       <a href="/login" class="anchor-login">Já tem uma conta? Faça login</a>
     </form>

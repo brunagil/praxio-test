@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ControlContainer } from '@angular/forms';
-import { NgForm } from '@angular/forms';
+// import { ControlContainer } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocalStorageService } from './../../service/local-storage.service';
 
@@ -8,7 +8,7 @@ import { LocalStorageService } from './../../service/local-storage.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
-  viewProviders: [ { provide: ControlContainer, useExisting: NgForm } ]
+  // viewProviders: [ { provide: ControlContainer, useExisting: NgForm } ]
 
   
 })

@@ -1,11 +1,10 @@
-<app-navbar></app-navbar>
-
 <section class="login-page">
     <div class="login">
-        <h1 class="login__title">{{ title }}</h1>
-        <form class="form" 
-        (ngSubmit)="onSubmit(loginForm)" 
-        #loginForm="ngForm">
+        <h1 class="login__title">Entrar</h1>
+        <form 
+            class="form"
+            #loginForm="ngForm"
+            (ngSubmit)="onSubmit(loginForm)">
             <div class="login__inputs">
                 <input 
                     class="login__inputs_size"
@@ -13,8 +12,6 @@
                     placeholder="E-mail" 
                     id="email" 
                     required="true"
-                    [(ngModel)]="userEmail"
-                    #propsEmail="ngModel
                 />
                 <input 
                     class="login__inputs_size"
@@ -27,11 +24,10 @@
                 <a href="#" class="forgot-password">Esqueceu a senha?</a>
             </div>
 
-                <app-button value="Entrar" class="login__btn">{{ button_title }}</app-button>
+                <app-button [theFormIsValid]="loginForm.valid" value="Entrar" class="login__btn">Entrar</app-button>
             </form>
-        <a routerLink="/cadastro" 
-            routerLinkActive="active" 
-            class="anchor-signin login-link"> Não tem uma conta? Cadastre-se</a>
+        <a href="/cadastro" 
+            class="anchor-signin login-link">Não tem uma conta? Cadastre-se</a>
     </div>
     <div class="footer__pages"></div>
 </section>

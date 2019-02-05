@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { NavbarModule } from './../../../components/navbar/module/navbar.module';
+// import { CommonModule } from '@angular/common';
+// import { NavbarModule } from './../../../components/navbar/module/navbar.module';
 
 import { ButtonModule } from './../../../components/button/module/button.module';
 import  { RegisterComponent } from './../register.component';
@@ -14,11 +14,10 @@ import  { RegisterComponent } from './../register.component';
     RegisterComponent,
   ],
   imports: [
-    CommonModule,
-    NavbarModule,
+    // CommonModule,
+    // NavbarModule,
     ButtonModule,
     FormsModule,
-    FormsModule
   ]
 
 })

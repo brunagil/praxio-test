@@ -1,32 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 
+import { NavbarModule } from './components/navbar/module/navbar.module';
 import { HomeModule } from './pages/home/module/home.module';
 import { LoginModule } from './pages/login/module/login.module';
 import { RegisterModule } from './pages/register/module/register.module';
-import { AppComponent } from './app.component';
-import { RouterLink, Router } from '@angular/router';
+import { PageNotFoundComponent } from './pages/notFound/notFound.component';
 
+import { AppComponent } from './app.component';
 
 
 @NgModule({
   declarations: [ //declara componentes que vamos utilizar nesse módulo
-    AppComponent
+    AppComponent, PageNotFoundComponent
   ],
+  
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
+    NavbarModule,
+
     HomeModule,
     LoginModule,
     RegisterModule,
   ],
-  entryComponents: [
-    
-  ],
-  
+ 
   providers: [], //serviços que vão ficar disponíveis para todos os módulos; escopo global da aplicação (router)
   bootstrap: [AppComponent] //componente que serve como container para nosso projeto
 })
