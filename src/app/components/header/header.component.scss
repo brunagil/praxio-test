@@ -60,11 +60,13 @@
     }
 
     &__btn {
-        text-decoration: none;
         cursor: pointer;
+        margin: 20px;
+        text-decoration: none;
         background-color: transparent;
         color: #ffffff;
         transition: background-color 0.5s ease;
+        
         &:hover {
             background-color: #ffffff; 
             color: #7626FF;

@@ -30,6 +30,12 @@
         margin: 6px;
     }
     
+    &__btn button {  
+        width: 50%;
+        margin: 2rem 12rem;
+
+    }
+
     &__inputs {
         display: flex;
         flex-direction: column;
