@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Input } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarModule } from './components/navbar/module/navbar.module';
 import { HomeModule } from './pages/home/module/home.module';
@@ -9,6 +10,7 @@ import { RegisterModule } from './pages/register/module/register.module';
 import { PageNotFoundComponent } from './pages/notFound/notFound.component';
 
 import { AppComponent } from './app.component';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,8 +21,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule,
+    ReactiveFormsModule,
+    FormsModule,
 
+    NavbarModule,
     HomeModule,
     LoginModule,
     RegisterModule,
